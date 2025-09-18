@@ -65,7 +65,7 @@ def crear():
 
 
 @tareas_bp.route("/modificar/<int:id_tarea>", methods=["PUT"])
-@jwt_required
+@jwt_required()
 def modificar(id_tarea):
 
     current_user = get_jwt_identity()
