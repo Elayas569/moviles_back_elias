@@ -74,7 +74,7 @@ def modificar(id_tarea):
 
     # Checar que la tarea
     querry = "SELECT * FROM tareas WHERE id_tarea = %s"
-    cursor.excecute(querry, (id_tarea,))
+    cursor.execute(querry, (id_tarea,))
     tarea = cursor.fetchone()
 
     if not tarea:
