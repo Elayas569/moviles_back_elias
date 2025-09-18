@@ -70,7 +70,7 @@ def modificar(id_tarea):
 
     current_user = get_jwt_identity()
     cursor = get_db_connection()
-    descripcion = request.get_json()
+    descripcion = request.get_json().get("description")
 
     # Checar que la tarea
     querry = "SELECT * FROM tareas WHERE id_tarea = %s"
